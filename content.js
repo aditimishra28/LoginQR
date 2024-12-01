@@ -12,7 +12,7 @@ function isLoginPage() {
     const passwordField = document.querySelector("input[type='password']");
   
     // Return true if any username/email/phone field is present with a password field
-    return (usernameField || phoneField) && passwordField;
+    return usernameField || passwordField;
   }
   
   // Send a message to the background script if it's a login page

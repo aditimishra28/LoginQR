@@ -14,15 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
   
           // Display the message
           messageContainer.textContent = message;
-  
+          console.log("Hello")
+          
           // Generate the QR code with the message
-          new QRCode(qrcodeContainer, {
+          const QR = new QRCode(qrcodeContainer, {
             text: message,
             width: 128,
             height: 128,
           });
+          console.log(QR)
         } catch (error) {
-          console.error("Error generating QR Code:", error);
+          console.log("Error generating QR Code:", error);
         }
       }
     });
